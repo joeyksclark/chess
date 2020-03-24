@@ -1,2 +1,5 @@
 maven wrapper
 jacoco
+findbugs
+checkstyle
+Design UML
