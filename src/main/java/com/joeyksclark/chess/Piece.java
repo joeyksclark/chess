@@ -8,12 +8,14 @@ public abstract class Piece {
 
     public Piece(Color color) {
         this.color = color;
+        this.captured = false;
         this.hasMoved = false;
     }
 
     public Piece(Color color, Square location) {
         this.color = color;
         this.location = location;
+        this.captured = false;
         this.hasMoved = false;
     }
 
@@ -23,6 +25,14 @@ public abstract class Piece {
 
     public void setColor(Color color) {
         this.color = color;
+    }
+
+    public Square getLocation() {
+        return this.location;
+    }
+
+    public void setLocation(Square square) {
+        this.location = square;
     }
 
     public boolean isCaptured() {
@@ -42,4 +52,5 @@ public abstract class Piece {
     }
 
     public abstract boolean canMove(Board board, Square destination);
+    public abstract String toString();
 }

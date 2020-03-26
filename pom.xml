@@ -6,7 +6,7 @@
 
   <groupId>com.joeyksclark.chess</groupId>
   <artifactId>chess</artifactId>
-  <version>0.2</version>
+  <version>0.3</version>
   <packaging>jar</packaging>
 
   <name>chess</name>
@@ -79,6 +79,14 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>1.6.0</version>
+          <configuration>
+            <mainClass>com.joeyksclark.chess.Chess</mainClass>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
