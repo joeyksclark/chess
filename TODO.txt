@@ -1,6 +1,4 @@
-Square equals
-Piece equals
-Piece Tests and Knight tests
+Knight tests
 Bishop logic
 Implement color differentiation for printBoard
 piece canMove logic
@@ -10,3 +8,6 @@ jacoco
 findbugs
 checkstyle
 Design UML
+
+bounds checking on square creation?
+more square tests
