@@ -26,6 +26,11 @@ public class Queen extends Piece {
 
     @Override
     public String toString() {
-        return " Q ";
+        if(getColor() == Color.WHITE) {
+            return DisplayColors.WHITE + " Q " + DisplayColors.RESET;
+        } else if(getColor() == Color.BLACK) {
+            return DisplayColors.GREEN + " Q " + DisplayColors.RESET;
+        }
+        return DisplayColors.RED + " Q " + DisplayColors.RESET;
     }
 }

@@ -5,7 +5,7 @@ public class Chess {
         Board board = new Board();
         board.printBoard();
 
-        System.out.println();
+        System.out.println("------------------------");
 
         board.newGame();
         board.printBoard();

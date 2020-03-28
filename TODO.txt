@@ -1,6 +1,6 @@
 Knight tests
 Bishop logic
-Implement color differentiation for printBoard
+Light and Dark Square distinction, print board for both views
 piece canMove logic
 
 maven wrapper

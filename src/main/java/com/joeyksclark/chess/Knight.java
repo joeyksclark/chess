@@ -37,6 +37,11 @@ public class Knight extends Piece {
 
     @Override
     public String toString() {
-        return " H ";
+        if(getColor() == Color.WHITE) {
+            return DisplayColors.WHITE + " H " + DisplayColors.RESET;
+        } else if(getColor() == Color.BLACK) {
+            return DisplayColors.GREEN + " H " + DisplayColors.RESET;
+        }
+        return DisplayColors.RED + " H " + DisplayColors.RESET;
     }
 }

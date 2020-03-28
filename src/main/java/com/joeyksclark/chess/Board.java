@@ -1,5 +1,7 @@
 package com.joeyksclark.chess;
 
+import java.util.ArrayList;
+
 public class Board{
     private Square[][] board = new Square[8][8];
 
@@ -107,6 +109,7 @@ public class Board{
     }
 
     public void printBoard() {
+        ArrayList<String> lineList = new ArrayList<>();
         String line;
 
         for(int i = 0; i < 8; i++) {
@@ -114,7 +117,11 @@ public class Board{
             for(int j = 0; j < 8; j++) {
                 line += getSquare(i,j).toString();
             }
-            System.out.println(line);
+            lineList.add(line);
+        }
+
+        for(int i = lineList.size()-1; i >= 0; i--) {
+            System.out.println(lineList.get(i));
         }
     }
 }
