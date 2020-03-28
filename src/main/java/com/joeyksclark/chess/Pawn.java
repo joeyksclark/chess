@@ -19,7 +19,9 @@ public class Pawn extends Piece {
             return false;
         }
 
-        //custom logic
+        //if hasn't moved, ydiff = 2, xdiff = 0, nothing at destination or in the way
+        //else if ydiff = 1, xdiff = 0, nothing at destination
+        //TODO implement en passant
 
         return false;
     }

@@ -47,4 +47,27 @@ public class Square {
             return piece.toString();
         }
     }
+
+    @Override
+    public boolean equals(Object b) {
+        if(b == this) {
+            return true;
+        }
+
+        if(b == null || b.getClass() != getClass()) {
+            return false;
+        }
+
+        Square s = (Square) b;
+
+        if((s.getX() == x) && (s.getY() == y)) {
+            if(s.getPiece() != null) {
+                return s.getPiece().equals(getPiece());
+            } else {
+                return getPiece() == null;
+            }
+        }
+
+        return false;
+    }
 }

@@ -1,3 +1,7 @@
+Square equals
+Piece equals
+Piece Tests and Knight tests
+Bishop logic
 Implement color differentiation for printBoard
 piece canMove logic
 

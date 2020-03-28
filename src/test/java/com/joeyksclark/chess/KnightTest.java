@@ -5,6 +5,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class KnightTest {
 
+    //destination is same square
+    //without pieces
+    //with pieces of same color
+    //with pieces of opposite color
+    //out of bounds
+
     @Test
     public void Test() {
 

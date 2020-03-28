@@ -19,7 +19,8 @@ public class Knight extends Piece {
             return false;
         }
 
-        if(destination.getPiece() == null) {
+        //if no piece at destination or opposite color
+        if(destination.getPiece() == null || destination.getPiece().getColor() == getOppositeColor()) {
             int xdiff = Math.abs(this.getLocation().getX() - destination.getX());
             int ydiff = Math.abs(this.getLocation().getY() - destination.getY());
 

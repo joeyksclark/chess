@@ -27,6 +27,19 @@ public abstract class Piece {
         this.color = color;
     }
 
+    public Color getOppositeColor() {
+        if(this.color != null) {
+            if(this.color == Color.WHITE) {
+                return Color.BLACK;
+            }
+            if(this.color == Color.BLACK) {
+                return Color.WHITE;
+            }
+        }
+
+        return null;
+    }
+
     public Square getLocation() {
         return this.location;
     }
@@ -49,6 +62,28 @@ public abstract class Piece {
 
     public void setMoved() {
         this.hasMoved = true;
+    }
+
+    public boolean equals(Object b) {
+        if(b == this) {
+            return true;
+        }
+
+        if(b == null || b.getClass() != getClass()) {
+            return false;
+        }
+
+        Piece p = (Piece) b;
+
+        if((p.isCaptured() == isCaptured()) && (p.hasMoved() == hasMoved()) && (p.getColor() == getColor())) {
+            if(p.getLocation() != null) {
+                return p.getLocation().getX() == getLocation().getX() &&
+                        p.getLocation().getY() == getLocation().getY();
+            }
+            return true;
+        }
+
+        return false;
     }
 
     public abstract boolean canMove(Board board, Square destination);
