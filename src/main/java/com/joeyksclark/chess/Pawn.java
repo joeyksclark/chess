@@ -71,11 +71,6 @@ public class Pawn extends Piece {
 
     @Override
     public String toString() {
-        if(getColor() == Color.WHITE) {
-            return DisplayColors.WHITE + " P " + DisplayColors.RESET;
-        } else if(getColor() == Color.BLACK) {
-            return DisplayColors.GREEN + " P " + DisplayColors.RESET;
-        }
-        return DisplayColors.RED + " P " + DisplayColors.RESET;
+        return " P ";
     }
 }

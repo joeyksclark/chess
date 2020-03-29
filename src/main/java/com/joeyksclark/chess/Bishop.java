@@ -42,11 +42,6 @@ public class Bishop extends Piece {
 
     @Override
     public String toString() {
-        if(getColor() == Color.WHITE) {
-            return DisplayColors.WHITE + " B " + DisplayColors.RESET;
-        } else if(getColor() == Color.BLACK) {
-            return DisplayColors.GREEN + " B " + DisplayColors.RESET;
-        }
-        return DisplayColors.RED + " B " + DisplayColors.RESET;
+        return " B ";
     }
 }

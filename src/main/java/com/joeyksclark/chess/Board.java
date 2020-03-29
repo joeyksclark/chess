@@ -1,7 +1,5 @@
 package com.joeyksclark.chess;
 
-import java.util.ArrayList;
-
 public class Board{
     private Square[][] board = new Square[8][8];
 
@@ -108,20 +106,41 @@ public class Board{
         tempSquare.setPiece(tempPiece);
     }
 
-    public void printBoard() {
-        ArrayList<String> lineList = new ArrayList<>();
+    public void printBoard(Color color) {
         String line;
 
-        for(int i = 0; i < 8; i++) {
-            line = "";
-            for(int j = 0; j < 8; j++) {
-                line += getSquare(i,j).toString();
+        if(color == Color.WHITE) {
+            for(int i = 7; i >= 0; i--) {
+                line = "";
+                for(int j = 0; j < 8; j++) {
+                    if(getSquare(i,j).getPiece() == null) {
+                        line += getSquare(i,j).toString();
+                    } else if(getSquare(i,j).getPiece().getColor() == Color.WHITE) {
+                        line += DisplayColors.WHITE + getSquare(i,j).toString() + DisplayColors.RESET;
+                    } else if(getSquare(i,j).getPiece().getColor() == Color.BLACK) {
+                        line += DisplayColors.GREEN + getSquare(i,j).toString() + DisplayColors.RESET;
+                    } else {
+                        line += DisplayColors.RED + getSquare(i,j).toString() + DisplayColors.RESET;
+                    }
+                }
+                System.out.println(line);
             }
-            lineList.add(line);
-        }
-
-        for(int i = lineList.size()-1; i >= 0; i--) {
-            System.out.println(lineList.get(i));
+        } else if(color == Color.BLACK) {
+            for(int i = 0; i < 8; i++) {
+                line = "";
+                for(int j = 7; j >= 0; j--) {
+                    if(getSquare(i,j).getPiece() == null) {
+                        line += getSquare(i,j).toString();
+                    }else if(getSquare(i,j).getPiece().getColor() == Color.WHITE) {
+                        line += DisplayColors.WHITE + getSquare(i,j).toString() + DisplayColors.RESET;
+                    } else if(getSquare(i,j).getPiece().getColor() == Color.BLACK) {
+                        line += DisplayColors.GREEN + getSquare(i,j).toString() + DisplayColors.RESET;
+                    } else {
+                        line += DisplayColors.RED + getSquare(i,j).toString() + DisplayColors.RESET;
+                    }
+                }
+                System.out.println(line);
+            }
         }
     }
 }

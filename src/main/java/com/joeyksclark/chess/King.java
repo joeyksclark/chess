@@ -26,11 +26,6 @@ public class King extends Piece {
 
     @Override
     public String toString() {
-        if(getColor() == Color.WHITE) {
-            return DisplayColors.WHITE + " K " + DisplayColors.RESET;
-        } else if(getColor() == Color.BLACK) {
-            return DisplayColors.GREEN + " K " + DisplayColors.RESET;
-        }
-        return DisplayColors.RED + " K " + DisplayColors.RESET;
+        return " K ";
     }
 }

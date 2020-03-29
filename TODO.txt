@@ -1,5 +1,5 @@
 Bishop logic
-Light and Dark Square distinction, print board for both views
+Light and Dark Square distinction
 
 maven wrapper
 jacoco
