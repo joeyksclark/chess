@@ -1,7 +1,5 @@
-Knight tests
 Bishop logic
 Light and Dark Square distinction, print board for both views
-piece canMove logic
 
 maven wrapper
 jacoco
