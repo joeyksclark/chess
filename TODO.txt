@@ -1,4 +1,7 @@
-Bishop logic
+Rook canMove
+Bishop canMove
+Queen canMove
+Add isCaptured to tests
 Light and Dark Square distinction
 
 maven wrapper

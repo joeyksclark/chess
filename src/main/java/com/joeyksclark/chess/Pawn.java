@@ -23,10 +23,7 @@ public class Pawn extends Piece {
         int ydiff = this.getLocation().getY() - destination.getY();
 
         if(getColor() == Color.WHITE && ydiff < 0 && Math.abs(xdiff) <= 1) {
-            /*System.out.println("xd: " + xdiff);
-            System.out.println("yd: " + ydiff);
-            System.out.println(destination.getPiece());
-            System.out.println();*/
+
             //can move forward one if no pieces are in the way
             if(ydiff == -1 && xdiff == 0 && destination.getPiece() == null) {
                 return true;

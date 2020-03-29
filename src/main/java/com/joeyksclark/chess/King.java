@@ -19,7 +19,16 @@ public class King extends Piece {
             return false;
         }
 
-        //custom logic
+        if(destination.getPiece() == null || destination.getPiece().getColor() == getOppositeColor()) {
+            int xdiff = Math.abs(this.getLocation().getX() - destination.getX());
+            int ydiff = Math.abs(this.getLocation().getY() - destination.getY());
+
+            if(xdiff <= 1 && ydiff <= 1 && !destination.equals(getLocation())) {
+                return true;
+            }
+        }
+
+        //TODO implement castling
 
         return false;
     }
