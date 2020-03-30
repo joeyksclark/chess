@@ -1,4 +1,3 @@
-Rook canMove
 Bishop canMove
 Queen canMove
 Add isCaptured to tests

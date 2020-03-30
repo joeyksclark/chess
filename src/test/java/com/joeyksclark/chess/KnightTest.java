@@ -1,6 +1,7 @@
 package com.joeyksclark.chess;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -38,7 +39,7 @@ public class KnightTest {
         Knight knight = new Knight(Color.WHITE);
         knight.setLocation(board.getSquare(4,4));
 
-        //same color piececs
+        //same color pieces
         board.getSquare(5,6).setPiece(new Pawn(Color.WHITE));
         board.getSquare(6,5).setPiece(new Rook(Color.WHITE));
         board.getSquare(3,2).setPiece(new Queen(Color.WHITE));
