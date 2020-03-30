@@ -11,27 +11,41 @@ public class Bishop extends Piece {
 
     @Override
     public boolean canMove(Board board, Square destination) {
-        if(this.getLocation() == null) {
+        if(getLocation() == null || getLocation().equals(destination)) {
             return false;
         }
 
-        if(this.isCaptured()) {
+        if(isCaptured()) {
             return false;
         }
 
         //if no piece at destination or opposite color
         if(destination.getPiece() == null || destination.getPiece().getColor() == getOppositeColor()) {
-            int xdiff = this.getLocation().getX() - destination.getX();
-            int ydiff = this.getLocation().getY() - destination.getY();
+            int xdiff = getLocation().getX() - destination.getX();
+            int ydiff = getLocation().getY() - destination.getY();
 
             if(Math.abs(xdiff) == Math.abs(ydiff)) {
-                //TODO
                 for(int i = 0; i < Math.abs(xdiff); i++) {
+                    //right and up
                     if(xdiff < 0 && ydiff < 0) {
-
-                    }
-                    if(false) {
-                        return false;
+                        if(board.getSquare(getLocation().getX()+i, getLocation().getY()+i).getPiece() != null) {
+                            return false;
+                        }
+                    //right and down
+                    } else if(xdiff < 0 && ydiff > 0) {
+                        if(board.getSquare(getLocation().getX()+i, getLocation().getY()-i).getPiece() != null) {
+                            return false;
+                        }
+                    //left and down
+                    } else if(xdiff > 0 && ydiff > 0) {
+                        if(board.getSquare(getLocation().getX()-i, getLocation().getY()-i).getPiece() != null) {
+                            return false;
+                        }
+                    //left and up
+                    } else if(xdiff > 0 && ydiff < 0) {
+                        if(board.getSquare(getLocation().getX()-i, getLocation().getY()+i).getPiece() != null) {
+                            return false;
+                        }
                     }
                 }
                 return true;
