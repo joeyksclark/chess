@@ -1,5 +1,5 @@
-Queen canMove
 Add isCaptured to tests
+Cleanup this usage
 Light and Dark Square distinction
 
 maven wrapper
